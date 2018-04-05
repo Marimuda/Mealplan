@@ -20,23 +20,20 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MySql.Data">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 6.10\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
-      <Private>true</Private>
+      <HintPath>..\Connector NET 6.10\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data.Entity.EF6">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 6.10\Assemblies\v4.5.2\MySql.Data.Entity.EF6.dll</HintPath>
-      <Private>true</Private>
+      <HintPath>..\Connector NET 6.10\Assemblies\v4.5.2\MySql.Data.Entity.EF6.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data.EntityFrameworkCore">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 6.10\Assemblies\v4.5.2\MySQL.Data.EntityFrameworkCore.dll</HintPath>
-      <Private>true</Private>
+      <HintPath>..\Connector NET 6.10\Assemblies\v4.5.2\MySQL.Data.EntityFrameworkCore.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data.EntityFrameworkCore.Design">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 6.10\Assemblies\v4.5.2\MySQL.Data.EntityFrameworkCore.Design.dll</HintPath>
-      <Private>true</Private>
+      <HintPath>..\Connector NET 6.10\Assemblies\v4.5.2\MySQL.Data.EntityFrameworkCore.Design.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Web">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 6.10\Assemblies\v4.5.2\MySql.Web.dll</HintPath>
+      <HintPath>..\Connector NET 6.10\Assemblies\v4.5.2\MySql.Web.dll</HintPath>
+      <Private>false</Private>
     </Reference>
   </ItemGroup>
 </Project>

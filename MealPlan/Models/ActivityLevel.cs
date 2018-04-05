@@ -3,16 +3,12 @@ using System.Collections.Generic;
 
 namespace MealPlan.Models
 {
-    public partial class ActivityLevels
+    public partial class ActivityLevel
     {
-        public enum Level
-        {
-            A, B, C, D, E
-        }
         public int BioId { get; set; }
-        public Level? ActivityLevel { get; set; }
+        public sbyte ActivityLevel1 { get; set; }
         public string ActivityDescription { get; set; }
 
-        public BioData BioData { get; set; }
+        public BioData Bio { get; set; }
     }
 }

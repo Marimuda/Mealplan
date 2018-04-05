@@ -1,8 +1,10 @@
-﻿dotnet ef dbcontext scaffold "server=127.0.0.1;port=3306;user=Admin;password=1234;database=mealplan" Pomelo.EntityFrameworkCore.MySql -o Models -f --verbose
+﻿dotnet ef dbcontext scaffold "server=127.0.0.1;port=3306;user=Admin;password=1234;database=mealplan" Pomelo.EntityFrameworkCore.MySql -o Models -f --verbose --context ApplicationDbContext
 
 to scaffold an individual table
-dotnet ef dbcontext scaffold "server=127.0.0.1;port=3306;user=Admin;password=1234;database=mealplan" Pomelo.EntityFrameworkCore.MySql -o Models -t mealplan.Persons --verbose
+dotnet ef dbcontext scaffold "server=127.0.0.1;port=3306;user=Admin;password=1234;database=mealplan" Pomelo.EntityFrameworkCore.MySql -o Model -t mealplan.Persons --verbose
 
+scaffold ApplicationDbContext
+dotnet ef dbcontext scaffold "server=127.0.0.1;port=3306;user=Admin;password=1234;database=mealplan" Pomelo.EntityFrameworkCore.MySql -o Models -f --verbose --context ApplicationDbContext
 
 
 dotnet ef migrations remove deletes the migration and ensures the snapshot is correctly reset.

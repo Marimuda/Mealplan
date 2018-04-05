@@ -10,9 +10,9 @@ namespace MealPlan.Models
         public sbyte Height { get; set; }
         public string Gender { get; set; }
         public DateTime Birthday { get; set; }
-        public int PersonId { get; set; }
+        public int? PersonId { get; set; }
 
         public Persons Person { get; set; }
-        public ActivityLevels ActivityLevel { get; set; }
+        public ActivityLevel ActivityLevel { get; set; }
     }
 }

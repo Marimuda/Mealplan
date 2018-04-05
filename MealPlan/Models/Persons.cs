@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
 namespace MealPlan.Models
 {
@@ -12,7 +11,6 @@ namespace MealPlan.Models
             Logins = new HashSet<Logins>();
         }
 
-        [Key]
         public int PersonId { get; set; }
         public string Firstname { get; set; }
         public string Surname { get; set; }
