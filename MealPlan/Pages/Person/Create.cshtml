@@ -1,0 +1,44 @@
+﻿@page
+@model MealPlan.Pages.Person.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Persons</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Persons.PersonId" class="control-label"></label>
+                <input asp-for="Persons.PersonId" class="form-control" />
+                <span asp-validation-for="Persons.PersonId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Persons.Firstname" class="control-label"></label>
+                <input asp-for="Persons.Firstname" class="form-control" />
+                <span asp-validation-for="Persons.Firstname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Persons.Surname" class="control-label"></label>
+                <input asp-for="Persons.Surname" class="form-control" />
+                <span asp-validation-for="Persons.Surname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

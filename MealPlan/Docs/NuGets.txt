@@ -1,0 +1,17 @@
+﻿Tools menu, select NuGet Package Manager > Package Manager Console
+
+Add scaffold tooling
+Install-Package Microsoft.VisualStudio.Web.CodeGeneration.Design
+Install-Package Microsoft.VisualStudio.Web.CodeGeneration.Utils
+
+
+Creates CRUD for Course in Pages/NameOfPageFolder
+Comand "  dotnet aspnet-codegenerator razorpage -m NameOfRazorPage -dc ApplicationDbContext -udl -outDir Pages\NameOfPageFolder --referenceScriptLibraries  "
+
+
+Parameter						Description
+-m								The name of the model.
+-dc								The data context.
+-udl							Use the default layout.
+-outDir							The relative output folder path to create the views.
+--referenceScriptLibraries		Adds _ValidationScriptsPartial to Edit and Create pages

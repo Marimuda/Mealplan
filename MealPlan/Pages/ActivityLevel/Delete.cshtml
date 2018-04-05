@@ -1,0 +1,40 @@
+﻿@page
+@model MealPlan.Pages.ActivityLevel.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ActivityLevels</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ActivityLevels.ActivityLevel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ActivityLevels.ActivityLevel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ActivityLevels.ActivityDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ActivityLevels.ActivityDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ActivityLevels.BioData)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ActivityLevels.BioData.Gender)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="ActivityLevels.BioId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

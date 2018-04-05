@@ -1,0 +1,65 @@
+﻿@page "{id:int}"
+@model MealPlan.Pages.Person.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Persons</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Persons.Firstname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Persons.Firstname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Persons.Surname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Persons.Surname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Persons.BioData)
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Height</th>
+                    <th>Weight</th>
+                    <th>Gender</th>
+                    <th>Birthday</th>
+                    <th>ActivityLevel</th>
+                </tr>
+                @foreach (var item in Model.Persons.BioData)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Height)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Weight)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Gender)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Birthday)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ActivityLevel.ActivityLevel)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Persons.PersonId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
