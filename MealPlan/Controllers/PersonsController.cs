@@ -1,11 +1,10 @@
-﻿using System;
+﻿using MealPlan.Data;
+using MealPlan.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using MealPlan.Models;
 
 namespace MealPlan.Controllers
 {
@@ -13,9 +12,9 @@ namespace MealPlan.Controllers
     [Route("api/Persons")]
     public class PersonsController : Controller
     {
-        private readonly MealplanContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public PersonsController(MealplanContext context)
+        public PersonsController(ApplicationDbContext context)
         {
             _context = context;
         }

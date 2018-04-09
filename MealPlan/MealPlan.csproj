@@ -5,6 +5,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational.Design" Version="1.1.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Utils" Version="2.0.3" />
@@ -20,20 +21,23 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MySql.Data">
-      <HintPath>..\Connector NET 6.10\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 6.10\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+      <Private>true</Private>
     </Reference>
     <Reference Include="MySql.Data.Entity.EF6">
-      <HintPath>..\Connector NET 6.10\Assemblies\v4.5.2\MySql.Data.Entity.EF6.dll</HintPath>
+      <HintPath>D:\Downloads\Mealplan-master\MySql.Data.Entity.EF6.dll</HintPath>
+      <Private>true</Private>
     </Reference>
     <Reference Include="MySql.Data.EntityFrameworkCore">
-      <HintPath>..\Connector NET 6.10\Assemblies\v4.5.2\MySQL.Data.EntityFrameworkCore.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 6.10\Assemblies\v4.5.2\MySQL.Data.EntityFrameworkCore.dll</HintPath>
+      <Private>true</Private>
     </Reference>
     <Reference Include="MySql.Data.EntityFrameworkCore.Design">
-      <HintPath>..\Connector NET 6.10\Assemblies\v4.5.2\MySQL.Data.EntityFrameworkCore.Design.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 6.10\Assemblies\v4.5.2\MySQL.Data.EntityFrameworkCore.Design.dll</HintPath>
+      <Private>true</Private>
     </Reference>
     <Reference Include="MySql.Web">
-      <HintPath>..\Connector NET 6.10\Assemblies\v4.5.2\MySql.Web.dll</HintPath>
-      <Private>false</Private>
+      <HintPath>D:\Downloads\Mealplan-master\MySql.Web.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

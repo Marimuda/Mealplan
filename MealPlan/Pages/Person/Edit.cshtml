@@ -1,12 +1,9 @@
 ﻿@page
 @model MealPlan.Pages.Person.EditModel
-
 @{
     ViewData["Title"] = "Edit";
 }
-
 <h2>Edit</h2>
-
 <h4>Persons</h4>
 <hr />
 <div class="row">
@@ -30,11 +27,9 @@
         </form>
     </div>
 </div>
-
 <div>
     <a asp-page="./Index">Back to List</a>
 </div>
-
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

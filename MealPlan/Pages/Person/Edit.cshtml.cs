@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using MealPlan.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using MealPlan.Models;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace MealPlan.Pages.Person
 {
     public class EditModel : PageModel
     {
-        private readonly MealPlan.Models.MealplanContext _context;
+        private readonly MealPlan.Data.ApplicationDbContext _context;
 
-        public EditModel(MealPlan.Models.MealplanContext context)
+        public EditModel(MealPlan.Data.ApplicationDbContext context)
         {
             _context = context;
         }

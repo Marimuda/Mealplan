@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using MealPlan.Data;
+using MealPlan.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MealPlan.Models;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace MealPlan.Controllers
 {
@@ -13,18 +13,18 @@ namespace MealPlan.Controllers
     [Route("api/ActivityLevels")]
     public class ActivityLevelsController : Controller
     {
-        private readonly MealplanContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public ActivityLevelsController(MealplanContext context)
+        public ActivityLevelsController(ApplicationDbContext context)
         {
             _context = context;
         }
 
         // GET: api/ActivityLevels
         [HttpGet]
-        public IEnumerable<ActivityLevels> GetActivityLevel()
+        public IEnumerable<ActivityLevel> GetActivityLevel()
         {
-            return _context.ActivityLevel;
+            return _context.ActivityLevels;
         }
 
         // GET: api/ActivityLevels/5
@@ -36,7 +36,7 @@ namespace MealPlan.Controllers
                 return BadRequest(ModelState);
             }
 
-            var activityLevel = await _context.ActivityLevel.FirstOrDefaultAsync(m => m.BioId == id);
+            var activityLevel = await _context.ActivityLevels.FirstOrDefaultAsync(m => m.BioId == id);
 
             if (activityLevel == null)
             {
@@ -48,7 +48,7 @@ namespace MealPlan.Controllers
 
         // PUT: api/ActivityLevels/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutActivityLevel([FromRoute] int id, [FromBody] ActivityLevels activityLevel)
+        public async Task<IActionResult> PutActivityLevel([FromRoute] int id, [FromBody] ActivityLevel activityLevel)
         {
             if (!ModelState.IsValid)
             {
@@ -83,14 +83,14 @@ namespace MealPlan.Controllers
 
         // POST: api/ActivityLevels
         [HttpPost]
-        public async Task<IActionResult> PostActivityLevel([FromBody] ActivityLevels activityLevel)
+        public async Task<IActionResult> PostActivityLevel([FromBody] ActivityLevel activityLevel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            _context.ActivityLevel.Add(activityLevel);
+            _context.ActivityLevels.Add(activityLevel);
             try
             {
                 await _context.SaveChangesAsync();
@@ -119,13 +119,13 @@ namespace MealPlan.Controllers
                 return BadRequest(ModelState);
             }
 
-            var activityLevel = await _context.ActivityLevel.FirstOrDefaultAsync(m => m.BioId == id);
+            var activityLevel = await _context.ActivityLevels.FirstOrDefaultAsync(m => m.BioId == id);
             if (activityLevel == null)
             {
                 return NotFound();
             }
 
-            _context.ActivityLevel.Remove(activityLevel);
+            _context.ActivityLevels.Remove(activityLevel);
             await _context.SaveChangesAsync();
 
             return Ok(activityLevel);
@@ -133,7 +133,7 @@ namespace MealPlan.Controllers
 
         private bool ActivityLevelExists(int id)
         {
-            return _context.ActivityLevel.Any(e => e.BioId == id);
+            return _context.ActivityLevels.Any(e => e.BioId == id);
         }
     }
 }

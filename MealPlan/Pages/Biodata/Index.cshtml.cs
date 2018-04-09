@@ -1,24 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using MealPlan.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using MealPlan.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MealPlan.Pages.Biodata
 {
     public class IndexModel : PageModel
     {
-        private readonly MealPlan.Models.MealplanContext _context;
+        private readonly MealPlan.Data.ApplicationDbContext _context;
 
-        public IndexModel(MealPlan.Models.MealplanContext context)
+        public IndexModel(MealPlan.Data.ApplicationDbContext context)
         {
             _context = context;
         }
 
-        public IList<BioData> BioData { get;set; }
+        public IList<BioData> BioData { get; set; }
 
         public async Task OnGetAsync()
         {

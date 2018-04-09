@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using MealPlan.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using MealPlan.Models;
+using System.Threading.Tasks;
 
 namespace MealPlan.Pages.Biodata
 {
     public class DeleteModel : PageModel
     {
-        private readonly MealPlan.Models.MealplanContext _context;
+        private readonly MealPlan.Data.ApplicationDbContext _context;
 
-        public DeleteModel(MealPlan.Models.MealplanContext context)
+        public DeleteModel(MealPlan.Data.ApplicationDbContext context)
         {
             _context = context;
         }

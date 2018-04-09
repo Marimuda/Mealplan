@@ -1,12 +1,9 @@
 ﻿@page "{id:int}"
 @model MealPlan.Pages.Person.DetailsModel
-
 @{
     ViewData["Title"] = "Details";
 }
-
 <h2>Details</h2>
-
 <div>
     <h4>Persons</h4>
     <hr />
@@ -51,7 +48,7 @@
                             @Html.DisplayFor(modelItem => item.Birthday)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.ActivityLevel.ActivityLevel)
+                            @Html.DisplayFor(modelItem => item.ActivityLevel.Activity)
                         </td>
                     </tr>
                 }

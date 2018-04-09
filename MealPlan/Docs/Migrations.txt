@@ -1,10 +1,8 @@
-﻿dotnet ef dbcontext scaffold "server=127.0.0.1;port=3306;user=Admin;password=1234;database=mealplan" Pomelo.EntityFrameworkCore.MySql -o Models -f --verbose --context ApplicationDbContext
+﻿dotnet ef dbcontext scaffold "server=127.0.0.1;port=3306;user=Admin;password=1234;database=mealplan" Pomelo.EntityFrameworkCore.MySql -o Models -f --verbose
 
 to scaffold an individual table
-dotnet ef dbcontext scaffold "server=127.0.0.1;port=3306;user=Admin;password=1234;database=mealplan" Pomelo.EntityFrameworkCore.MySql -o Model -t mealplan.Persons --verbose
+dotnet ef dbcontext scaffold "server=127.0.0.1;port=3306;user=Admin;password=1234;database=mealplan" Pomelo.EntityFrameworkCore.MySql -o Models -t mealplan.Persons --verbose
 
-scaffold ApplicationDbContext
-dotnet ef dbcontext scaffold "server=127.0.0.1;port=3306;user=Admin;password=1234;database=mealplan" Pomelo.EntityFrameworkCore.MySql -o Models -f --verbose --context ApplicationDbContext
 
 
 dotnet ef migrations remove deletes the migration and ensures the snapshot is correctly reset.
@@ -12,11 +10,11 @@ Command "  dotnet ef migrations remove  "
 
 Create an initial migration
 - https://docs.microsoft.com/en-us/aspnet/core/data/ef-rp/migrations#create-an-initial-migration
-Comand "  dotnet ef migrations add InitialCreate --context MealplanContext  "
+Comand "  dotnet ef migrations add InitialCreate --context ApplicationDbContext  "
 
 Apply the migration to the DB in development 
 - https://docs.microsoft.com/en-us/aspnet/core/data/ef-rp/migrations#apply-the-migration-to-the-db-in-development
-Comand "  dotnet ef database update --context MealplanContext --verbose "
+Comand "  dotnet ef database update --context ApplicationDbContext --verbose "
 
 
 ApplicationDbContext =  SchoolContext

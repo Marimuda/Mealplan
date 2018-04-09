@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using MealPlan.Data;
 using MealPlan.Models;
 
 namespace MealPlan.Controllers
@@ -13,9 +14,9 @@ namespace MealPlan.Controllers
     [Route("api/BioDatas")]
     public class BioDatasController : Controller
     {
-        private readonly MealplanContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public BioDatasController(MealplanContext context)
+        public BioDatasController(ApplicationDbContext context)
         {
             _context = context;
         }

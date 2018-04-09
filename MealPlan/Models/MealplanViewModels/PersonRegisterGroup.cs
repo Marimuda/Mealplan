@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace MealPlan.Models.MealplanViewModels
+namespace MealPlan.Data.MealplanViewModels
 {
     public class PersonRegisterGroup
     {

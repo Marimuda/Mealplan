@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using MealPlan.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using MealPlan.Models;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace MealPlan.Pages.Person
 {
     public class IndexModel : PageModel
     {
-        private readonly MealPlan.Models.MealplanContext _context;
+        private readonly MealPlan.Data.ApplicationDbContext _context;
 
-        public IndexModel(MealPlan.Models.MealplanContext context)
+        public IndexModel(MealPlan.Data.ApplicationDbContext context)
         {
             _context = context;
         }
@@ -23,7 +21,7 @@ namespace MealPlan.Pages.Person
         public string CurrentFilter { get; set; }                  //
         public string CurrentSort { get; set; }                    //
                                                                    //
-        public PaginatedList<Persons> Persons { get;set; }
+        public PaginatedList<Persons> Persons { get; set; }
 
         public async Task OnGetAsync(string sortOrder,
         string currentFilter, string searchString, int? pageIndex)  //
